@@ -2,7 +2,7 @@ console.log('Hola mundo')
 //TODO LO QUE HAY QUE SABER DE JAVASCRIPT PARA APRENDER REACT
 
 //FUNCIONES 
-/*function hello(){
+function hello(){
     //console.log('Hello')
     return 'Hola mundo'
 }
@@ -31,7 +31,7 @@ function add(x, y = 0){
 console.log(add(10, 20))
 
 //OBJETOS
-const user = {
+const users = {
     name: 'Ryan',
     lastname: 'Perez',
     age: 30,
@@ -45,9 +45,9 @@ const user = {
     sendMail: function(){ return 'sending email...'}
 }
 
-console.log(user)
-console.log(user.name)
-console.log(user.sendMail())
+console.log(users)
+console.log(users.name)
+console.log(users.sendMail())
 
 const name = 'laptop'
 const price = 3000
@@ -62,7 +62,7 @@ const newProduct = {
 }
 console.log(newProduct)
 
-//-->manipulación del DOM
+//-->MANIPULACIÓN DOM
 const title = document.createElement('h1');
 title.innerText = "Hola mundo desde JS";
 
@@ -74,25 +74,25 @@ button.addEventListener('click', () =>{
 })
 
 document.body.append(title);
-document.body.append(button);*/
+document.body.append(button);
 
 //DESTRUCTURING
-/*const user = {
+const userr = {
     name: 'joe',
     age: 30,
 }
-/*function printInfo(user){
-    return '<h1>Hola ' + user.name +  '</h1>'
+function printInfo(userr){
+    return '<h1>Hola ' + userr.name +  '</h1>'
 }
-*/
-/*function printInfo({name}){
+
+function printInfo({name}){
     return '<h1>Hola ' + name +  '</h1>'
 }
 console.log(printInfo(user))
-document.body.innerHTML = printInfo(user)*/
+document.body.innerHTML = printInfo(user)
 
 //FUNCIONES ANONIMAS
-/*function start(){
+function start(){
     return 'Starting...'
 }
 console.log(start())
@@ -109,21 +109,21 @@ button.innerText = 'click me'
 button.addEventListener('click', function(){
     alert ('clicked')
 })
-document.body.appendChild(button)*/
+document.body.appendChild(button)
 
 //ARROW FUNCTIONS
-/*function add(x, y){
+function add(x, y){
     return x + y
 }
 
 //la funcion flecha:
 const add = (x, y) =>{
     return x + y
-}*/
+}
 
 //INLINE ARROW FUNCTIONS
 
-/*const showText = () =>{
+const showText = () =>{
     return 'Hola mundo'
 }
 console.log(showText())
@@ -132,10 +132,10 @@ console.log(showText())
 const showTextt = () => 'Hola Mundo';
 const showNumber = () => 22;
 const showBoolean = () => true;
-const showArray = () => [1, 2, 3]*/
+const showArray = () => [1, 2, 3]
 
 //RETURN EN FUNCTIONS
-/*const button = document.createElement('button')
+const button = document.createElement('button')
 button.innerText = 'click me'
 
 const isAuthorized = true
@@ -147,12 +147,12 @@ button.addEventListener('click', () =>{
             alert('You are not authorized')
         }
 })
-document.body.append(button)*/
+document.body.append(button)
 
 //STRING LITERALS
-/*const background = 'red'
+const background = 'red'
 const color = 'white'
-const isAuthorized = true
+const isAuthorize = true
 
 //const result =`Estos son estilos: ${background} ${color}`
 
@@ -172,11 +172,11 @@ button.addEventListener('click', () =>{
             alert('You are not authorized')
         }
 })
-document.body.append(button)*/
+document.body.append(button)
 
 //ARRAY METHODS = listar varios elementos
 
-/*const names = [' ryan', 'joe', 'maria']
+const namess = [' ryan', 'joe', 'maria']
 
 for (let i = 0; i < names.length; i++) {
     const element = names[i];
@@ -190,7 +190,7 @@ names.forEach(function (name){
 const newNames =  names.map(function (name){
     return name
 })
-console.log(newNames)*/
+console.log(newNames)
 
 //find busca un elemento
 //filter permite crear un nuevo arreglo con elementos que hayan filtrado es como un delete
@@ -220,5 +220,38 @@ const userInfo = {
 
 import {add} from './add.js'
 add(10, 20)
+
+//OPTIONAL CHAININGS = datos que traemos de un backend
+const person = {
+    name: 'John',
+    address: {street: 'street 1'}
+}
+console.log(person.address.street)
+console.log(person.location.city)//no existe
+//una forma de hacerlo
+if (person.location){
+    console.log(person.location.city)
+}
+//pero se hace así
+console.log(person.location?.street)
+
+//ASYNC AWAIT
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(function(response){
+        return response.json()
+    }).then(function(data){
+        console.log(data)
+        data.forEach(function(post){
+            const li = document.createElement('li')
+            li.innerText = post.title
+            ul.appendChild(li)
+        })
+        document.body.appendChild(ul)
+    })
+
+console.log('linea 2')
+
+
+
 
 
