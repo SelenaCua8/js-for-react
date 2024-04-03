@@ -1,0 +1,56 @@
+What is OOP?
+-Programming paradigm focus on objects instead of   functions.
+-{} objetos en js
+-Es un paradigma, o modelo, forma de pensar.
+-Es viejo, de los años 70
+
+-Objects: 
+
+
+Properties: Clave y valor: datos que describen un objeto (real/virtual/abstracto)
+-ejemplo:
+auto modelo: shellby cobra
+color: azul
+creación: 1953
+velocidad: 160
+precio: 150000
+
+ejemplo2 tarjeta:
+numero de tarjeta: 000054881629
+tipoDeTarjeta: visa
+Type: VisaGold
+Dueño: G Raymond
+Monto: 100
+
+-Method: relacionado con las propiedades, le dan funcionalidad al objeto
+ejemplo el auto: se prende, se apaga, avanza, frena, acelera
+
+start: function(){}
+
+ejemplo tarjeta: 
+metodo de retiro de cuenta,
+metodo de poner plata en la cuenta
+
+CONSTRUCTOR: generador de objetos: funciones que permiten crear objetos con propiedades y metodos
+es una funcion pero te das cuenta porque escribis en mayuscula ejemplo:
+function Person (asi te das cuenta que es un constructor)
+
+OBJECT()
+Tiene sus contrusctores ya creados
+new object()
+
+NEW: se utiliza cuando creas un nuevo objeto con un constructor 
+const person = new Person()
+sino te da undefined pq no sabe a que constructor estas asisgnando 
+
+PROTOTIPO: se utiliza para agregar una nueva propiedad a un constructor , alteramos los nuestros y los que vienen con JS
+
+const s = new String("hello world")
+String.prototype.concatTest = function(){
+    return this + 'test';
+}
+
+"My name is Jesus".concatTest();
+
+CLASS, no se usa como oob como en los viejos programas
+son conjuntos de metodos, que permiten definir un objeto, es una forma bonita de escribirlo y tiene algunas mejoras
