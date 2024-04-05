@@ -54,3 +54,153 @@ String.prototype.concatTest = function(){
 
 CLASS, no se usa como oob como en los viejos programas
 son conjuntos de metodos, que permiten definir un objeto, es una forma bonita de escribirlo y tiene algunas mejoras
+
+OPP PRINCIPLES:
+PAUTAS O CARACTERISTICAS QUE DEBEN CUMPLIR PARA SER PROGRAMACION ORIENTADAS A OBJETOS 
+
+-codigo modular y reutilizable
+- capacidad de medolar problemas a traves de objetos
+asociacion, agregación, composición
+
+polimorfismo: capability to process objects differently based on their data type or structure
+
+Is JavaScript OO?
+-JS lack of a class concept
+-it does not enforce compliance with OOPbut principles -are required for object not classes
+-class are not requires, but its a convenient way to   abstract objects with common Propertiesa language can   be OO even without classes like JS
+
+modelar a traves de objetos, para poder simplicar la realidad => ABSTRACCION (ABSTRACTION)
+
+-ASOCIACIÓN
+class Person{
+    constructor(name, lastname){
+        this.name = name
+        this.lastname = lastname
+    }
+}
+
+const john = new Person('john', 'Ray')
+const maria = new Person('maria', 'teresa')
+
+maria.parent = john;
+relacion a traves de una propiedad
+utilizamos asociacion y son independientes de igual manera, funcionan igual juntos o separados
+
+-AGREGACIÓN 
+const company = {
+    name: 'Selena SRL'
+    employees: []
+}
+
+company.employees.push(maria)
+company.employees.push(john)
+
+COMPOSICIÓN: tipo de agregacion en q muchos objetos pertencen a un objeto mayor pero ninguno de ellos es independientes
+const person = {
+    name: 'ryan',
+    lastname: 'perez',
+    addres: {
+        street: 'soler',
+        city: 'argentina',
+        country: 'argentina'
+    }
+}
+aca tenes un objeto y adentro tiene otro objeto pero por ejemplo si sacas addres de el objeto person
+ addres: {
+        street: 'soler',
+        city: 'argentina',
+        country: 'argentina'
+    }
+no tiene vida independiente, no tiene proposito para utilizarlo
+ENCAPSULACION, HERENCIA, POLIMORFISMO
+
+ENCAPSULAMIENTO: concentrar datos y funcionalidad ocultando los detalles internos, no es necesario entender en profundidad algo, simplificar el uso de un objeto. Tiene q saber q funciona y ya esta, no es necesario entender como. 
+
+const company = {
+    name: 'Selena SRL',
+    employees: [],
+    sortEmployees: function(){}
+}
+
+function Company(name){
+    let employees = [] //no es una propiedad es una variable dentro del constructor
+    this.name = name
+
+    this.getEmployees = function(){
+        return employees
+    }
+}
+new company = new Company('Coca cola)
+
+
+HERENCIA: permite crear objetos especializados a partir de uno mas genérico
+
+ejemplo: 
+user:
+name
+lastname
+
+programmer:
+name
+lastname
+language
+
+se puede heredar
+user hereda name y lastname de programmer:
+
+function Person(){
+    this.name = ''
+    this.lastname = ''
+}
+
+function Programmer(){
+    this.language = ''
+    
+}
+
+Programmer.prototype = new Person()
+
+const programmer = new Programmer()
+programmer.name = 'ryan'    
+programmer.lastname = 'perez'
+programmer.language = 'js'
+heredo nombre y apellido de person  ahora con class
+
+class Person{
+    constructor(name, lastname)
+    this.name = name
+    this.lastname = lastname
+}
+
+class Programmer extends Person{
+    constructor(name, lastnamelanguage){
+        super(name, lastname)
+        this.language = language
+    }
+}
+
+const person = new Person('maria','perez')
+
+
+cons programmer = new Programmer('jose','mcmiller','python')
+
+POLIMORFISMO
+capacidad q tienen algunos objetos para poder manipular distintos tipos de datos de manera uniforme
+-reduce codigo
+-caracteristicas:
+sobrecarga
+-polimorfismo parametrico
+-subtipo de polimorfismo 
+
+overloading(sobrecarga)
+ej c#
+publick int CountItems(int x){
+    return x.ToString().Length;
+}
+
+publick int CountItems(string x){
+    return x.Length;
+}
+
+
+
