@@ -1,0 +1,131 @@
+Qué es JavaScript ?
+JavaScript es un lenguaje de scripting que inicialmente fue concebido para correr en navegadores, aunque hoy se puede utilizar también en el servidor de la mano de Node.JS.
+
+Qué es ECMAScript ?
+Cuando hablamos de ECMAScript, nos referimos al estándar que determina cómo emplear el lenguaje Javascript.
+
+Cuál es la diferencia entre los operadores (==) , (===), (!=) ?
+Igualdad (==) Verifica la igualdad de dos expresiones sin tener en cuenta el tipo de dato.
+Igualdad estricta (===) Hace lo mismo que el anterior, pero verificando también que coincidan los tipos de datos.
+Desigualdad (!=) Funciona de la misma forma que la igualdad, pero negándola.
+
+Qué es y cómo se crea un Promise ?
+Un Promise (promesa en castellano) es un objeto que representa la terminación o el fracaso de una operación asíncrona. Los Promises se crean usando un constructor llamado Promise y pasándole 
+una función que recibe dos parámetros, resolve y reject , que nos permiten indicarle a esta que se resolvió o se rechazó.
+
+Cuál es la diferencia entre null y undefined ?
+El valor null es un literal de Javascript que representa intencionalmente un valor nulo o "vacío". Es uno de los valores primitivos de Javascript.
+Undefined Es el valor por default que se le asigna a una variable que esta sin definir aun. Aunque también existe una propiedad global "undefined" que representa uno de los valores primitivos de JS.
+
+Qué es AJAX ?
+AJAX significa JavaScript asíncrono y XML (Asynchronous JavaScript and XML)
+ Es un conjunto de técnicas de desarrollo que permiten a aplicaciones web enviar datos al servidor y obtener datos sin actualizar la página.
+ Cuál es la diferencia entre sincronismo y asincronismo ?
+En un código síncrono cada operación se hace de una vez, bloqueando el flujo de ejecución de la siguiente mientras se espera una respuesta, cuando esta se procesa pasa a la siguiente operación y así sucesivamente..
+ Un código asíncrono no espera a las instrucciones diferidas y continúa con su ejecución. Es decir, el código asíncrono se ejecutará sin necesidad que el código anterior haya completado su tarea.
+
+Cuál es la diferencia entre Var , let y const ?
+VAR es una forma de declarar variables con alcance global o local es decir, sin importar el ámbito del bloque. Su valor podrña ser modificado en cualquier momento.
+ LET  permite declarar variables limitando su alcance (scope) al bloque, declaración, o expresión donde se está usando. Su valor podrá ser modificado dentro del bloque en el que se esta utilizando.
+CONST tiene un alcance igual al de LET , pero la diferencia principal es que es una constante cuyo valor no podrá ser modificado en el futuro.
+
+ Qué es el DOM ?
+El DOM (Document Object Model) es la estructura de objetos que genera el navegador cuando se carga un documento y que puede ser manipulada con JS.
+
+¿Qué es la programación funcional?
+la programación funcional es uno de los paradigmas soportados por el lenguaje JavaScript. Es un estilo de programación declarativo basado en la evaluación de funciones matemáticas.
+Una de sus características son los objetos inmutables: después de haber definido su valor, el objeto ya no se puede modificar, sino que se pueden crear y modificar copias. Un punto fuerte de este paradigma es la falta 
+de efectos secundarios de las funciones, lo que simplifica el debug. El primer lenguaje en usar programación funcional fue Lisp, y entre otros están Haskell, Erlang, Scala, Clojure y OCaml.
+
+
+¿Cuál es la diferencia entre la herencia de clases y la herencia de prototipos?
+A diferencia de otros lenguajes, que se basan en el concepto de clase, JavaScript se basa en el concepto de prototipo. Esta importante distinción podría aparecer, por tanto, entre las preguntas de la entrevista de trabajo.
+
+En los lenguajes orientados a objetos basados ​​en clases, antes de crear un objeto se debe definir una clase que establezca sus características. Estos serán heredados por todos los objetos pertenecientes a una subclase, creada a partir de la clase principal,
+según una organización jerárquica.
+En el lenguaje JavaScript, por el contrario, es posible crear directamente un objeto sin establecer primero una clase. En este caso, un objeto hereda propiedades de otro objeto o prototipo. A diferencia del modelo basado en clases, 
+que define rígidamente las características heredadas, con la herencia prototípica es posible agregar más propiedades en tiempo de ejecución.
+¿Cuál es la mayor diferencia entre var y let?
+A partir de la especificación ES6, es posible declarar variables, además de var, con las palabras clave let y const. Las características que distinguen a var let y const pueden aparecer entre las preguntas de una entrevista para convertirse en
+programador de JavaScript. Una diferencia fundamental es el alcance: para las variables con let se limita al bloque en el que aparecen, mientras que las declaradas con var tienen alcance global o de función.
+
+
+¿Cuáles son las ventajas de JavaScript frente a otras tecnologías basadas en web?
+Estas son las ventajas de JavaScript:
+
+Mejora interactiva: JavaScript interactúa con las páginas web estáticas y hace que respondan a las entradas de los usuarios.
+Respuesta rápida: No hay ninguna razón para que una página de Internet vuelva a cargarse cuando se utiliza JavaScript. Por ejemplo, la validación de entradas de formularios.
+Interfaz de usuario enriquecida: JavaScript ayuda a mejorar el aspecto de la interfaz de usuario de las aplicaciones basadas en web.
+Frameworks de trabajo: JavaScript dispone de vastas bibliotecas y frameworks que pueden utilizarse ampliamente para desarrollar juegos y aplicaciones basadas en web.
+
+¿Cuáles son las características de JavaScript?
+
+Estas son algunas de las características de JavaScript:
+
+Compatible con varias plataformas
+Código abierto
+Orientado a objetos
+Integración con diversas tecnologías front-end y back-end
+
+
+¿Cuáles son los diferentes tipos de datos presentes en JavaScript?
+Existen tres tipos de datos principales en JavaScript.
+
+Primitivos
+
+Números
+Cadenas
+Booleanos
+Compuesto
+Objetos
+
+Funciones
+Matrices
+Trivial
+Nulo
+
+Indefinido
+
+¿Por qué se utilizan las funciones Flecha en casi todas partes?
+
+Las funciones flecha se usan en todas partes porque
+
+Seguridad de alcance: Cuando la función de flecha se utiliza en todas partes, trae consistencia de alcance porque el mismo thisObject se utiliza en todas partes. Si por casualidad,
+una función estándar se utiliza junto con la función flecha, hay posibilidades de que el ámbito se mezcle.
+Compactibilidad: Comparada con la función estándar, la función flecha es compacta ya que no necesita palabras clave, llaves, paréntesis, etc. en ciertos casos. Por lo tanto, es más fácil de leer y escribir.
+Claridad: Cuando la función flecha se utiliza en todas partes, existe una cierta coherencia de alcance. Así, cada vez que una función estándar se mezcla con ella, se distingue claramente. Así, el desarrollador
+puede buscar la función inmediatamente superior para localizar el thisObject.
+
+¿Es JavaScript un lenguaje de tipado dinámico o estático?
+JavaScript es un lenguaje de tipado dinámico.
+
+Describa las funciones de Flecha.
+La versión ES6 de Javascript introdujo las funciones Arrow. Con las funciones Arrow, podemos declarar funciones utilizando una sintaxis nueva y más corta. Estas funciones sólo pueden utilizarse como expresiones de función. 
+La declaración de estas funciones se realiza sin utilizar la palabra clave function. Además, si hay una única expresión de retorno, ni siquiera es necesaria la palabra clave return. Además, siempre que el código aparezca en 
+una sola línea, podemos omitir las llaves {}. Si sólo hay un argumento en una función, podemos omitir incluso el paréntesis ().
+
+¿Cuáles son las principales diferencias entre Java y JavaScript?
+La principales diferencias entre Java y JavaScript es que Java es un lenguaje de programación de propósito general basado en clases, mientras que JavaScript es un lenguaje de scripting interpretado. Además, Java 
+se utiliza para crear aplicaciones completas que pueden ejecutarse en un único ordenador o distribuirse entre servidores y clientes en una red. JavaScript se utiliza para crear páginas web interactivas que pueden responder a las acciones del usuario.
+
+
+¿Cuáles son las estructuras de bucle en JavaScript?
+bucle while: Una sentencia de flujo de control de bucle while que permite que el código se ejecute repetidamente en respuesta a una condición booleana. El bucle while se considera una sentencia if repetida.
+
+bucle for: Un bucle for ofrece una estructura fácil de escribir. A diferencia del bucle while, la sentencia for combina un proceso de inicialización, una condición y un incremento/decremento en una sola línea, ofreciendo así
+una estructura de bucle más simple y fácil de entender.
+
+do while: Un bucle do-while puede ser como un bucle while, pero con la excepción de que examina la condición después de ejecutar las sentencias, por lo que es una instancia del Bucle de Control de Salida.
+
+
+¿Cómo se puede acceder a un elemento HTML en código JavaScript?
+Estos son los métodos mediante los cuales un elemento HTML puede ser utilizado en código JavaScript:
+
+getElementById('idname'): Obtiene un elemento por su nombre ID
+
+getElementsByClass('nombreclase'): Obtiene todos los elementos que tienen el nombre de clase dado.
+
+getElementsByTagName('tagname'): Obtiene todos los elementos con el nombre de etiqueta dado.
+
+querySelector(): Devuelve el primer elemento seleccionado utilizando un selector de estilo CSS.
+
